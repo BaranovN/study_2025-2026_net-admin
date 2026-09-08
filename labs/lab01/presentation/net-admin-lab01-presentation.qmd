@@ -1,0 +1,87 @@
+---
+author:
+  name: Баранов Никита Дмитриевич
+  email: 1132242977@rudn.ru
+  affiliation:
+    - name: Российский университет дружбы народов им. Патриса Лумумбы
+      city: Москва
+      country: Российская Федерация
+title: "Лабораторная работа № 1"
+subtitle: "Подготовка лабораторного стенда"
+license: CC BY
+date: today
+date-format: "YYYY-MM-DD"
+---
+
+# Информация
+
+## Докладчик
+
+:::::::::::::: {.columns align=center}
+::: {.column width="70%"}
+
+- Баранов Никита Дмитриевич
+- Студент РУДН
+- [1132242977@rudn.ru](mailto:1132242977@rudn.ru)
+
+:::
+::: {.column width="30%"}
+
+![](image/baranov.jpeg)
+
+:::
+::::::::::::::
+
+# Цель и задачи
+
+## Цель работы
+
+- Получить практические навыки создания и подготовки виртуальных машин Rocky Linux с помощью Packer, VirtualBox и Vagrant.
+
+## Основные этапы
+
+- Проверены версии VirtualBox, Packer и Vagrant и доступность команд в PowerShell.
+- Подготовлен HCL-шаблон Packer для VirtualBox ISO builder: заданы ISO Rocky Linux, аппаратные параметры, boot command и SSH communicator.
+- Автоматическая установка описана Kickstart-файлом; для стабильной установки выбрана обычная схема разделов без LVM.
+- Выполнены packer init, packer validate и сборка только VirtualBox-источника.
+- После установки системы Packer дождался SSH, запустил provisioners и передал ВМ Vagrant post-processor.
+- Подготовлен Vagrantfile с узлами server и client, их именами, памятью и внутренней сетью 192.168.1.0/24.
+- Конфигурация проверена командой vagrant validate; стенд готов для последующих работ.
+
+# Ход работы
+
+## Этап 1
+
+- Проверены версии VirtualBox, Packer и Vagrant и доступность команд в PowerShell.
+
+## Этап 2
+
+- Подготовлен HCL-шаблон Packer для VirtualBox ISO builder: заданы ISO Rocky Linux, аппаратные параметры, boot command и SSH communicator.
+
+## Этап 3
+
+- Автоматическая установка описана Kickstart-файлом; для стабильной установки выбрана обычная схема разделов без LVM.
+
+## Этап 4
+
+- Выполнены packer init, packer validate и сборка только VirtualBox-источника.
+
+## Этап 5
+
+- После установки системы Packer дождался SSH, запустил provisioners и передал ВМ Vagrant post-processor.
+
+## Этап 6
+
+- Подготовлен Vagrantfile с узлами server и client, их именами, памятью и внутренней сетью 192.168.1.0/24.
+
+## Этап 7
+
+- Конфигурация проверена командой vagrant validate; стенд готов для последующих работ.
+
+# Результаты
+
+## Итоги работы
+
+- Подготовлен воспроизводимый стенд Rocky Linux: Packer описывает сборку box-образа, Kickstart автоматизирует установку, а Vagrantfile фиксирует параметры узлов server и client.
+
+## Спасибо за внимание
